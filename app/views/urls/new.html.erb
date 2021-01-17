@@ -1,0 +1,22 @@
+
+<h1>
+Welcome to short.com
+</h1>
+<%= form_with url: urls_path,remote: true, model: @url do |form| %>
+  <div>
+    <p>Please Enter Your URL here</p>
+  </div>
+  <div>
+    <%= form.text_field :link %>
+    <%= form.submit "SHORTEN"%>
+  </div>
+<% end %>
+
+
+<div id="shorten-url-div" style="display: none;margin-top: 20px;">
+  <div>Here is your short url</div>
+  <a href="" id="short-url" style="margin-top: 5px;" target="_blank"></a>
+</div>
+<div id="error" style="display: none;margin-top: 20px;color:red">
+ <p>Already exist or not valid URL!!!</p>
+</div>

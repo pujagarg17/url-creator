@@ -1,0 +1,9 @@
+<% if @slug%>
+	document.getElementById("error").style.display = "none";
+	document.getElementById("shorten-url-div").style.display = "block";
+	document.getElementById("short-url").innerHTML = "http://localhost:3000/"+"<%= @slug%>";
+	document.getElementById("short-url").href = "http://localhost:3000/"+"<%= @slug%>";
+<%else%>
+document.getElementById("shorten-url-div").style.display = "none";
+	document.getElementById("error").style.display = "block";
+<%end%>

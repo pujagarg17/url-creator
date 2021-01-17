@@ -1,0 +1,12 @@
+<h1 style="margin-bottom: 10px;">Analytics</h1>
+<%@stats.each do |stat|%>
+  <div>
+      <p style="font-weight: bold;"><%= stat.link%></p>
+      <p><%= "http://localhost:3000/#{stat.slug}"%></p>
+      <p>Total Clicks: <%= stat.clicks%></p>
+      <p>Top Countries: <%= (stat.country).join(",")%></p>
+
+  </div>
+  <hr/>
+<%end%>
+
